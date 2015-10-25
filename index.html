@@ -11,13 +11,12 @@
   </head>
 
   <body ng-controller="todoListController">
-    <form name="todoForm" ng-submit="addTodo()">
-      <input type="text" ng-model="todo" placeholder="What needs to be done?">
+    <form name="todoForm" ng-submit="addTodo()" >
+      <input type="text" ng-model="todo" placeholder="What needs to be done?" size="25">
     </form>
-    <ul ng-repeat='todo in todoStore'>
-      <li>
-        {{todo}} <a href="" ng-click="removeTodo($index)">remove</a>
-      </li>
-    </ul>
+    <div class="todo-list" ng-repeat='todo in todoStore'>
+      <input type="checkbox" ng-model="todoStore"> {{todo}}
+      <a href="" ng-click="removeTodo($index)">remove</a>
+    </div>
   </body>
 </html>
