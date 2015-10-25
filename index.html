@@ -14,9 +14,10 @@
     <form name="todoForm" ng-submit="addTodo()">
       <input type="text" ng-model="todo" placeholder="What needs to be done?">
     </form>
-    <!-- <button type="submit" ng-click="addTodo()">Add</button> -->
-    <ul>
-      <li ng-repeat='todo in todoStore'>{{todo}}</li>
+    <ul ng-repeat='todo in todoStore'>
+      <li>
+        {{todo}} <a href="" ng-click="removeTodo($index)">remove</a>
+      </li>
     </ul>
   </body>
 </html>
