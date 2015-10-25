@@ -10,9 +10,11 @@
     <script src="js/todoListController.js"></script>
   </head>
 
-  <body ng-controller="todoListController as todosCtrl">
-    <ul ng-repeat='todo in todosCtrl.todos'>
-      <li>{{todo}}</li>
+  <body ng-controller="todoListController">
+    <input type="text" ng-model="todo" placeholder="What needs to be done?">
+    <button type="submit" ng-click="addTodo()">Add</button>
+    <ul>
+      <li ng-repeat='todo in todoStore'>{{todo}}</li>
     </ul>
   </body>
 </html>
