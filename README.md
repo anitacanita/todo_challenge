@@ -22,6 +22,7 @@ I started by planning on paper what the very most basic todo list should do. The
 3. Delete a task
 
 ## To Be Done:
+* Get Travis CI working
 * Edit a task
 * Filter tasks
 * Clear completed tasks
