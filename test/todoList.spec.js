@@ -17,4 +17,10 @@ describe('todoListController', function() {
     $scope.addTodo('bananas');
     expect($scope.todoStore.length).toEqual(1);
   });
+
+  it('user can remove items from list', function() {
+    $scope.addTodo('bananas');
+    $scope.removeTodo(0);
+    expect($scope.todoStore.length).toEqual(0);
+  });
 });

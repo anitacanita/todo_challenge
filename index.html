@@ -10,7 +10,7 @@
     <script src="js/todoListController.js"></script>
   </head>
 
-  <body ng-controller="todoListController">
+  <body ng-controller="todoListController as todoCtrl">
     <form name="todoForm" ng-submit="addTodo()" >
       <input type="text" ng-model="todo" placeholder="What needs to be done?" size="25">
     </form>
